@@ -75,13 +75,13 @@ App.StudentsView = Backbone.View.extend({
     el: $('.student-list'),
     initialize: function() {
         var that = this;
-        this.model.on('add', this.render, this);
-        this.model.on('change', function() {
+        this.listenTo(this.model,'add', this.render);
+        this.listenTo(this.model,'change', function() {
             setTimeout(function() {
                 that.render();
             }, 25);
         },this);
-        this.model.on('remove', this.render, this);
+        this.listenTo(this.model,'remove', this.render);
     },
     render: function() {
         var that = this;
