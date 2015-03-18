@@ -1,0 +1,29 @@
+h1 {
+    color: #483D8B
+}
+.add-btn {
+    background-color: #6495ed;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #6495ed;
+}
+.edit-btn,.update-btn {
+    background-color: #FFA500;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #FFA500;
+}
+.delete-btn,.cancel-btn {
+    background-color: #DC143C;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #DC143C;
+}
+tbody, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
