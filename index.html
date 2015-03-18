@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students Information Page</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Students Information Page</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Standard</th>
+                <th>Sex</th>
+                <th>Address</th>
+            </tr>
+            <tr>
+                <td><input class="name-input"></td>
+                <td><input class="standard-input"></td>
+                <td><input class="sex-input"></td>
+                <td><input class="address-input"></td>
+                <td><button class="add-btn">Add</button></td>
+            </tr>
+        </thead>
+        <tbody class="student-list"></tbody>
+    </table>
+  </div>
+<script type="text/template" class="student-list-template">
+  <td><span class="name"><%= name %></span></td>
+  <td><span class="standard"><%= standard %></span></td>
+  <td><span class="sex"><%= sex %></span></td>
+  <td><span class="address"><%= address %></span></td>
+  <td><button class="edit-btn">Edit</button><button class="delete-btn">Delete</button><button class="update-btn" style="display:none">Update</button><button class="cancel-btn" style="display:none">Cancel</button></td>
+</script>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="libraries/underscore-min.js"></script>
+<script src="libraries/backbone-min.js"></script>
+<script src="js/code.js"></script> 
+</body>
+</html>
+
+
+
