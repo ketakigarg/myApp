@@ -34,8 +34,8 @@ App.StudentView = Backbone.View.extend({
         'click .delete-btn': 'delete'
     },
     edit: function() {
-        $('.edit-btn').hide();
-        $('.delete-btn').hide();
+        this.$('.edit-btn').hide();
+        this.$('.delete-btn').hide();
         this.$('.update-btn').show();
         this.$('.cancel-btn').show();
 
@@ -101,17 +101,21 @@ $(document).ready(function(){
 
 
     $('.add-btn').on('click', function() {
-        
+        $('.error-msg').html('');
         var student = new App.Student({
             name: $('.name-input').val(),
             standard: $('.standard-input').val(),
             sex: $('.sex-input').val(),
             address: $('.address-input').val()
         });
+        if($('.name-input').val() != '' && $('.standard-input').val()!='' ) {
+            students.add(student);
+        } else{
+            $('.error-msg').html('Both Name and Standard are required fields');
+        }
         $('.name-input').val('');
         $('.standard-input').val('');
         $('.sex-input').val('');
         $('.address-input').val('');
-        students.add(student);
     })    
 })
